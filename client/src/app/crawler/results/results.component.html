@@ -1,0 +1,14 @@
+<div class="content-container">
+  <div class="result-container" *ngFor="let result of results">
+    <div class="url-container">
+      URL - {{ result.url }}
+    </div>
+    <div class="images-container">
+      <div class="image-tile" *ngFor="let image of result.images">
+        <div class="image-container">
+          <img [src]="image" alt="No image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

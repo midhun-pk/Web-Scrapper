@@ -1,0 +1,14 @@
+<form class="form-container" (ngSubmit)="onSubmit(crawlerForm)" #crawlerForm="ngForm">
+  <div class="input-container">
+    <input type="text" name="url" id="url" placeholder="Enter URL" ngModel required autocomplete="off">
+  </div>
+  <div class="input-container">
+    <input type="number" name="depth" id="depth" placeholder="Enter depth" ngModel required autocomplete="off">
+  </div>
+  <div class="button-container">
+    <button type="submit">Crawl</button>
+  </div>
+  <div class="message-container" *ngIf="!isValid">
+    Please enter the URL and depth.
+  </div>
+</form>
