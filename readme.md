@@ -16,3 +16,5 @@ git clone https://github.com/midhun-pk/Web-Scrapper.git
 cd server
 python manage.py runserver
 ```
+
+Point to `http://localhost:8000/crawler/` in your browser.
