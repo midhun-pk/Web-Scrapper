@@ -6,7 +6,7 @@
     <input type="number" name="depth" id="depth" placeholder="Enter depth" ngModel required autocomplete="off">
   </div>
   <div class="button-container">
-    <button type="submit">Crawl</button>
+    <button type="submit" [disabled]="crawling">{{ crawling ? 'Crawling...': 'Crawl' }}</button>
   </div>
   <div class="message-container" *ngIf="!isValid">
     Please enter the URL and depth.
