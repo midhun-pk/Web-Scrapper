@@ -29,7 +29,7 @@ class Crawler:
             string (str): The string for which unique id is to be generated.
 
         Returns:
-            results (list): A list of al urls in the html
+            hash (int): A unique hash
         """
         hash = 0
         if len(string) > 0:
@@ -46,7 +46,7 @@ class Crawler:
             html (str): The html file from which urls should be identified
 
         Returns:
-            results (list): A list of al urls in the html
+            paths (list): A list of al urls in the html
         """
         soup = BeautifulSoup(html, 'lxml')
         paths = set()
@@ -110,7 +110,7 @@ class Crawler:
             html (str): The html file from which images need to be downloaded
 
         Returns:
-            results (list): A list of visited urls and the paths of the images saved for each url.
+            images (list): A list of paths to the images.
         """
         soup = BeautifulSoup(html, 'lxml')
         images = set()
